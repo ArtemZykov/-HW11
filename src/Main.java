@@ -1,3 +1,5 @@
+import java.util.SortedMap;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,15 +19,30 @@ public class Main {
                 //" Название книги: " + oldIsergil.getTitle() + ", год публикации: " + oldIsergil.getPublicationDate());
         print(oldIsergil);
         print(blackMan);
-        blackMan.setPublicationDate(2000);
+        blackMan.setPublicationDate(2000); //set... позволяет изменить от слово setupe (установить)
         print(blackMan);
-    }
+        System.out.println(oldIsergil);
+        System.out.println(blackMan);
+        System.out.println( blackMan.equals(oldIsergil));
+        System.out.println(oldIsergil.hashCode());
+        System.out.println(blackMan.hashCode());
 
+
+
+    }
     private static void print(Book book) {
-        System.out.println(" Автор книги: " + book.getAutor().getFirstname()+" "+ book.getAutor().getLastname() +
+        System.out.println(" Автор книги: " + book.getAutor().getFirstname() + " " + book.getAutor().getLastname() +
                 ", название  книги: " + book.getTitle() + ", год публикации: " + book.getPublicationDate()); // что бы не
         // дублировать "System.out.println(" Автор книги: " + blac...." сделали метод который выводит необходимую инфу
         // "подсмотрено" и просто печатаем print(название книги") и вовдятся необходимые нам данные. КРУТЬ
 
+
     }
+
+
+
+
+
+
+
 }
